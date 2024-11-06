@@ -167,6 +167,14 @@
             z-index: 0;
         }
     </style>
+
+<div style="text-align: center; margin-top: 10px;">
+    <a href="https://www.twitch.tv/paulieboi01" target="_blank">
+        <img src="images/boomerfruit.png" alt="Boomer Fruit" style="width: 150px; height: auto; border-radius: 10px;">
+    </a>
+</div>
+
+
 </head>
 <body>
     <div class="container">
@@ -193,31 +201,32 @@
             <button class="button" onclick="resetRandomiser()">Reset</button>
         </div>
 
-        <div class="operator-display" id="operatorDisplay">
-            <div class="operator-info">
-                <div class="gadget-section">
-                    <strong>Gadgets:</strong> 
-                    <span id="gadgetNames">No gadgets selected.</span>
-                    <div class="gadget-images">
-                        <img id="gadgetImage1" src="" alt="Gadget Image 1" style="display: none;">
-                        <img id="gadgetImage2" src="" alt="Gadget Image 2" style="display: none;">
-                    </div>
-                </div>
-                <div class="weapon-info">
-                    <div class="gun-section">
-                        <strong>Primary:</strong> <span id="primaryWeaponName"></span>
-                        <img id="primaryWeaponImage" src="" alt="Primary Weapon Image" style="display: none;">
-                    </div>
-                    <div class="gun-section">
-                        <strong>Secondary:</strong> <span id="secondaryWeaponName"></span>
-                        <img id="secondaryWeaponImage" src="" alt="Secondary Weapon Image" style="display: none;">
-                    </div>
-                </div>
+       <div class="operator-display" id="operatorDisplay">
+    <div class="operator-info">
+        <div class="weapon-info">
+            <div class="gun-section">
+                <strong>Primary:</strong> <span id="primaryWeaponName"></span>
+                <img id="primaryWeaponImage" src="" alt="Primary Weapon Image" style="display: none;">
             </div>
-            <div class="operator-images">
-                <img id="operatorImage" src="" alt="Operator Image" style="display: none;">
+            <div class="gun-section">
+                <strong>Secondary:</strong> <span id="secondaryWeaponName"></span>
+                <img id="secondaryWeaponImage" src="" alt="Secondary Weapon Image" style="display: none;">
             </div>
         </div>
+        <div class="gadget-section">
+            <strong>Gadgets:</strong> 
+            <span id="gadgetNames">No gadgets selected.</span>
+            <div class="gadget-images">
+                <img id="gadgetImage1" src="" alt="Gadget Image 1" style="display: none;">
+                <img id="gadgetImage2" src="" alt="Gadget Image 2" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div class="operator-images">
+        <img id="operatorImage" src="" alt="Operator Image" style="display: none;">
+    </div>
+</div>
+
 
         <div class="history">
             <h2>History (Last 5)</h2>
@@ -716,7 +725,7 @@
             "ARX200"
         ],
         "secondaryWeapons": [
-            ".44 Mag Semi-Auto",
+            "44 Mag Semi-Auto",
             "PRB92"
         ],
         "gadgets": [
@@ -1013,7 +1022,7 @@
             "M590A1"
         ],
         "secondaryWeapons": [
-            ".44 Vendetta"
+            "44 Vendetta"
         ],
         "gadgets": [
             "Frag Grenade",
@@ -1350,7 +1359,7 @@
             "SUPPORT"
         ],
         "primaryWeapons": [
-            "VECTOR .45 ACP",
+            "Vector .45 ACP",
             "ITA12L"
         ],
         "secondaryWeapons": [
@@ -1502,7 +1511,7 @@
             "TCSG12"
         ],
         "secondaryWeapons": [
-            ".44 Mag Semi-Auto",
+            "44 Mag Semi-Auto",
             "LFP586"
         ],
         "gadgets": [
@@ -1915,7 +1924,7 @@
             document.body.appendChild(bgImage);
 
             const bgImages = document.querySelectorAll('.background-operator');
-            if (bgImages.length > 5) {
+            if (bgImages.length > 100) {
                 bgImages[0].remove();
             }
         }
