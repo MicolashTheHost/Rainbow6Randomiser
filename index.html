@@ -167,14 +167,6 @@
             z-index: 0;
         }
     </style>
-
-<div style="text-align: center; margin-top: 10px;">
-    <a href="https://www.twitch.tv/paulieboi01" target="_blank">
-        <img src="images/boomerfruit.png" alt="Boomer Fruit" style="width: 150px; height: auto; border-radius: 10px;">
-    </a>
-</div>
-
-
 </head>
 <body>
     <div class="container">
@@ -202,29 +194,35 @@
         </div>
 
         <div class="operator-display" id="operatorDisplay">
-    <div class="operator-info">
-        <div class="weapon-info">
-            <div class="gun-section">
-                <strong>Primary:</strong> <span id="primaryWeaponName"></span>
-                <img id="primaryWeaponImage" src="" alt="Primary Weapon Image" style="display: none;">
+            <div class="operator-info">
+                <div class="gadget-section">
+                    <strong>Gadgets:</strong> 
+                    <span id="gadgetNames">No gadgets selected.</span>
+                    <div class="gadget-images">
+                        <img id="gadgetImage1" src="" alt="Gadget Image 1" style="display: none;">
+                        <img id="gadgetImage2" src="" alt="Gadget Image 2" style="display: none;">
+                    </div>
+                </div>
+                <div class="weapon-info">
+                    <div class="gun-section">
+                        <strong>Primary:</strong> <span id="primaryWeaponName"></span>
+                        <img id="primaryWeaponImage" src="" alt="Primary Weapon Image" style="display: none;">
+                    </div>
+                    <div class="gun-section">
+                        <strong>Secondary:</strong> <span id="secondaryWeaponName"></span>
+                        <img id="secondaryWeaponImage" src="" alt="Secondary Weapon Image" style="display: none;">
+                    </div>
+                </div>
             </div>
-            <div class="gun-section">
-                <strong>Secondary:</strong> <span id="secondaryWeaponName"></span>
-                <img id="secondaryWeaponImage" src="" alt="Secondary Weapon Image" style="display: none;">
+            <div class="operator-images">
+                <img id="operatorImage" src="" alt="Operator Image" style="display: none;">
             </div>
         </div>
-        <div class="gadget-section">
-            <strong>Gadgets:</strong> 
-            <span id="gadgetNames">No gadgets selected.</span>
-            <div class="gadget-images">
-                <img id="gadgetImage1" src="" alt="Gadget Image 1" style="display: none;">
-                <img id="gadgetImage2" src="" alt="Gadget Image 2" style="display: none;">
-            </div>
+
+        <div class="history">
+            <h2>History (Last 5)</h2>
+            <div id="historyImages" class="history-images"></div>
         </div>
-    </div>
-    <div class="operator-images">
-        <img id="operatorImage" src="" alt="Operator Image" style="display: none;">
-    </div>
     </div>
 
     <script>
@@ -1352,7 +1350,7 @@
             "SUPPORT"
         ],
         "primaryWeapons": [
-            "Vector .45 ACP",
+            "VECTOR .45 ACP",
             "ITA12L"
         ],
         "secondaryWeapons": [
@@ -1917,7 +1915,7 @@
             document.body.appendChild(bgImage);
 
             const bgImages = document.querySelectorAll('.background-operator');
-            if (bgImages.length > 100) {
+            if (bgImages.length > 5) {
                 bgImages[0].remove();
             }
         }
